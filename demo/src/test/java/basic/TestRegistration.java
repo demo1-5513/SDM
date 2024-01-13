@@ -50,17 +50,7 @@ public class TestRegistration {
 			}
 		}
 	  
-	  WebElement dd = driver.findElement(By.xpath("//*[@id=\"Skills\"]"));
-		 Select dditems = new Select(dd);
-		 List<WebElement> options = dditems.getOptions();
-		 for(WebElement op : options)
-		 {
-			 if(op.getAttribute("Value").equalsIgnoreCase("AutoCAD"))
-			 {
-				 dditems.selectByValue("AutoCAD");
-				 break;
-			 }
-		 }
+	 
 		 
 		 driver.findElement(By.id("Button1")).click();
 		   
