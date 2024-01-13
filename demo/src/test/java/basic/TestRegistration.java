@@ -36,8 +36,33 @@ public class TestRegistration {
 			}
 		}
 	  
+		List<WebElement> chkboxes = driver.findElements(By.xpath("//*[@id=\"checkbox1\"]"));
+
+		for (WebElement ch : chkboxes)
+		{
+			if(ch.getAttribute("value").equalsIgnoreCase("Cricket"))
+			{
+				if(!ch.isSelected())
+				{
+					ch.click();
+					break;
+				}
+			}
+		}
+	  
+	  WebElement dd = driver.findElement(By.xpath("//*[@id=\"Skills\"]"));
+		 Select dditems = new Select(dd);
+		 List<WebElement> options = dditems.getOptions();
+		 for(WebElement op : options)
+		 {
+			 if(op.getAttribute("Value").equalsIgnoreCase("AutoCAD"))
+			 {
+				 dditems.selectByValue("AutoCAD");
+				 break;
+			 }
+		 }
 		 
-		 driver.findElement(By.id("B")).click();
+		 driver.findElement(By.id("submitbtn")).click();
 		   
   }
   
