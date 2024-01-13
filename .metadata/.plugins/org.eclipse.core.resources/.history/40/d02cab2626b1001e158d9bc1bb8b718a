@@ -1,0 +1,59 @@
+package util;
+
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class UtilMethods {
+	
+	
+	@Test
+	public void LaunchBrowser(String url)
+	{
+		  WebDriverManager.chromedriver().setup();
+		   WebDriver driver = new ChromeDriver();
+		  driver.get(url);
+		  
+		  driver.manage().window().maximize();
+		  
+		  System.out.println(driver.getTitle());
+		  System.out.println(driver.getCurrentUrl());
+		  
+		  
+		//return driver;
+	}	
+
+	public void selectCheckBox(WebDriver driver, By locator, String value)
+	{
+		
+	}
+	
+	public void selectRadio(WebDriver driver, By locator, String value)
+	{
+		
+	}
+	
+	public void selectDDByValue(WebDriver driver, By locator, String value)
+	{
+		
+	}
+	
+	public void selectDDByText(WebDriver driver, By locator, String text)
+	{
+		
+	}
+	
+	public void verifyCellData(WebDriver driver, By locator, int rownum, int colnum, String text)
+	{
+		
+	}
+	
+	public void verifyRowData(WebDriver driver, By locator, int rownum, String text)
+	{
+		
+	}
+}

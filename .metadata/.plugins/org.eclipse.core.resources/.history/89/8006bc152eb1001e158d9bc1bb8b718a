@@ -1,0 +1,64 @@
+package basic;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LaunchBrowser {
+  @Test
+  public void launchChrome() {
+	  WebDriverManager.chromedriver().setup();
+	  WebDriver driver = new ChromeDriver();
+	  driver.get("https://demo.automationtesting.in/Register.html");
+	  
+	  driver.manage().window().maximize();
+	  
+	  driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input")).sendKeys("abc");
+	  driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[2]/div/textarea")).sendKeys("my address");
+	  
+	  
+	  List<WebElement> radios = driver.findElements(By.name("radiooptions"));
+		for (WebElement rb : radios)
+		{
+			if(rb.getAttribute("value").equalsIgnoreCase("Male"))
+			{
+				rb.click();
+				break;
+			}
+		}
+	  
+		List<WebElement> chkboxes = driver.findElements(By.className("checks"));
+		for (WebElement ch : chkboxes)
+		{
+			if(ch.getAttribute("value").equalsIgnoreCase("Movies"))
+			{
+				if(!ch.isSelected())
+				{
+					ch.click();
+					break;
+				}
+			}
+		}
+	  
+	  WebElement dd = driver.findElement(By.xpath("//*[@id=\"Skills\"]"));
+		 Select dditems = new Select(dd);
+		 List<WebElement> options = dditems.getOptions();
+		 for(WebElement op : options)
+		 {
+			 if(op.getAttribute("Value").equalsIgnoreCase("AutoCAD"))
+			 {
+				 dditems.selectByValue("AutoCAD");
+				 break;
+			 }
+		 }
+	  
+	  
+  }
+}
