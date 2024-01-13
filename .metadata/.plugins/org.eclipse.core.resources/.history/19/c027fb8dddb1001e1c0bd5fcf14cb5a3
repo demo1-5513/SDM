@@ -26,15 +26,15 @@ public class TestRegistration {
 	  driver.findElement(By.xpath("//*[@id=\"eid\"]/input")).sendKeys("my@email");
 	  
 	  
-	  List<WebElement> radios = driver.findElements(By.name("radiooptions"));
-		for (WebElement rb : radios)
-		{
-			if(rb.getAttribute("value").equalsIgnoreCase("Male"))
-			{
-				rb.click();
-				break;
-			}
-		}
+//	  List<WebElement> radios = driver.findElements(By.name("radiooptions"));
+//		for (WebElement rb : radios)
+//		{
+//			if(rb.getAttribute("value").equalsIgnoreCase("Male"))
+//			{
+//				rb.click();
+//				break;
+//			}
+//		}
 	  
 		 
 		 driver.findElement(By.id("B")).click();
