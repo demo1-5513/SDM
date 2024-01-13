@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRegistration" project="demo" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="basic.TestRegistration" time="31.013" displayname="TestRegistration" uniqueid="[engine:junit-vintage]/[runner:basic.TestRegistration]">
+    <testcase name="launchChrome" classname="basic.TestRegistration" time="31.013" displayname="launchChrome" uniqueid="[engine:junit-vintage]/[runner:basic.TestRegistration]/[test:launchChrome(basic.TestRegistration)]"/>
+  </testsuite>
+</testrun>

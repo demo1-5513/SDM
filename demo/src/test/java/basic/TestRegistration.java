@@ -36,23 +36,8 @@ public class TestRegistration {
 			}
 		}
 	  
-		List<WebElement> chkboxes = driver.findElements(By.xpath("//*[@id=\"checkbox1\"]"));
-
-		for (WebElement ch : chkboxes)
-		{
-			if(ch.getAttribute("value").equalsIgnoreCase("Cricket"))
-			{
-				if(!ch.isSelected())
-				{
-					ch.click();
-					break;
-				}
-			}
-		}
-	  
-	 
 		 
-		 driver.findElement(By.id("Button1")).click();
+		 driver.findElement(By.id("B")).click();
 		   
   }
   
